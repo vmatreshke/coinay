@@ -20,9 +20,80 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: "BlissPro-Bold"; src: url("../fonts/BlissPro-Bold.eot"); src: url("../fonts/BlissPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BlissPro-Bold.woff") format("woff"), url("../fonts/BlissPro-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "OpenSans-Light"; src: url("../fonts/OpenSans-Light.eot"); src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "OpenSans-Regular"; src: url("../fonts/OpenSans-Regular.eot"); src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "OpenSans-Semibold"; src: url("../fonts/OpenSans-Semibold.eot"); src: url("../fonts/OpenSans-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold.woff") format("woff"), url("../fonts/OpenSans-Semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "OpenSans-Regular", Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+[class^="icon-"] { display: inline-block; position: relative; }
+
+.icon-buy { background: url('../img/icons-s194e924b41.png') 0 -215px no-repeat; width: 17px; height: 16px; }
+
+.icon-code { background: url('../img/icons-s194e924b41.png') 0 -456px no-repeat; width: 15px; height: 14px; }
+
+.icon-wallet { background: url('../img/icons-s194e924b41.png') 0 -1183px no-repeat; width: 18px; height: 17px; }
+
+.input { height: 40px; line-height: 40px; background-color: #FFF; border: 1px solid #E4E4E4; border-radius: 5px; box-shadow: inset 2.8px 2.8px 5px rgba(0, 0, 0, 0.05); }
+
+.l { max-width: 940px; padding: 0 10px; margin: auto; }
+
+.toparea { display: table; width: 100%; height: 100vh; table-layout: fixed; color: #FFF; background-position: 20% 40%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; background-color: #0B3250; background-image: url("../img/toparea-bg.jpg"); }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .toparea { background-image: url("../img/toparea-bg2x.jpg"); } }
+
+.toparea__inner { display: table-cell; position: relative; vertical-align: middle; padding: 90px 0; background: rgba(11, 50, 80, 0.7); }
+
+.toparea__main { *zoom: 1; }
+.toparea__main:after { content: " "; display: table; clear: both; }
+
+.toparea__main-left { float: left; max-width: 350px; }
+
+.toparea__main-right { float: right; max-width: 500px; }
+
+.header { position: absolute; top: 0; left: 0; right: 0; padding: 40px 0 20px; line-height: 1; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+
+.logo { float: left; display: inline-block; position: relative; margin-top: -15px; color: #ff9800; font-size: 35px; line-height: 1; font-family: "BlissPro-Bold", Arial, sans-serif; font-weight: normal; text-decoration: none; }
+.logo:hover { text-decoration: none !important; }
+.logo sup { position: absolute; top: 1px; left: 100%; font-size: 10px; text-transform: uppercase; }
+
+.lang { float: right; position: relative; font-size: 13px; margin: -2px 0 0 30px; color: #FFF; color: #ff9800; cursor: pointer; }
+
+.lang__current { display: inline-block; vertical-align: middle; color: #FFF; }
+.lang:hover .lang__current { color: #ff9800; }
+
+.lang__list { display: none; position: absolute; top: 100%; left: 0; }
+.lang:hover .lang__list { display: block; }
+
+.lang__icon { display: inline-block; vertical-align: middle; margin-left: 10px; background: url('../img/icons-s194e924b41.png') 0 -819px no-repeat; width: 19px; height: 19px; }
+.lang:hover .lang__icon { background: url('../img/icons-s194e924b41.png') 0 -742px no-repeat; width: 19px; height: 19px; }
+
+.nav { float: right; font-size: 14px; }
+.nav ul { font-size: 0; }
+.nav li { display: inline-block; vertical-align: middle; margin-right: 30px; }
+.nav li:last-child { margin-right: 0; }
+.nav a { font-size: 14px; font-family: "OpenSans-Semibold", Arial, sans-serif; color: #FFF; text-decoration: none; }
+.nav a:hover { color: #ff9800; }
+
+.line { position: absolute; bottom: 0; left: 0; right: 0; height: 90px; line-height: 90px; overflow: hidden; background: #0B5B9C; color: #FFF; font-size: 0; }
+
+.line__list { display: inline-block; width: 100%; }
+.line__list li { display: inline-block; vertical-align: middle; width: 33.33%; box-sizing: border-box; text-align: center; font-size: 15px; }
+.line__list li strong { font-weight: normal; }
+
+.figure { display: table; table-layout: fixed; text-align: left; line-height: 1; }
+.line .figure { max-width: 170px; margin: auto; }
+
+.figure__icon { display: table-cell; width: 40px; vertical-align: middle; }
+
+.figure__text { display: table-cell; vertical-align: middle; }
+
+.voucher { width: 309px; height: 208px; margin: 40px 0 0 -10px; background-image: url("../img/voucher.png"); background-repeat: no-repeat; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .voucher { background-image: url("../img/voucher2x.png"); -webkit-background-size: 309px 208px; -o-background-size: 309px 208px; background-size: 309px 208px; } }
+
+.exchange { display: block; margin-top: 80px; font-size: 13px; line-height: 1; text-transform: uppercase; }
+.exchange em { color: #ff9800; font-style: normal; }
+
+.title { font-size: 25px; line-height: 1; }
+
+.title-head { font-family: "OpenSans-Light", Arial, sans-serif; font-weight: normal; font-size: 40px; line-height: 1.1; }
