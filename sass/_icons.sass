@@ -6,7 +6,8 @@
   font-style: normal
 
 
-[class^="icon-"], [class*=" icon-"]
+// [class^="icon-"], [class*=" icon-"]
+.icon
   font-family: 'iconfont'
   speak: none
   font-style: normal
@@ -14,21 +15,47 @@
   font-variant: normal
   text-transform: none
   line-height: 1
+  //for <button class="icon">
+  background: none
   // Better Font Rendering ===========
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-.icon-buy:before
-  content: "\e600"
+.icon-buy
+  font-size: 16px
+  &:before
+    content: "\e600"
 
-.icon-code:before
-  content: "\e601"
+.icon-code
+  font-size: 14px
+  &:before
+    content: "\e601"
 
-.icon-mail:before
-  content: "\e602"
+.icon-mail
+  font-size: 14px
+  &:before
+    content: "\e602"
 
-.icon-user:before
-  content: "\e603"
+.icon-user
+  font-size: 18px
+  &:before
+    content: "\e603"
 
-.icon-wallet:before
-  content: "\e604"
+.icon-wallet
+  font-size: 18px
+  &:before
+    content: "\e604"
+
+.icon-search
+  font-size: 18px
+  &:before
+    content: "\e605"
+
+.icon-subject
+  font-size: 14px
+  &:before
+    content: "\e606"
+
+.icon-text
+  &:before
+    content: "\e607"

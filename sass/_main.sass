@@ -18,17 +18,18 @@
   display: table-cell
   position: relative
   vertical-align: middle
-  padding: 90px 0
+  padding: 110px 0
   background: rgba(#0B3250, 0.7)
 
 .toparea__main
   +clr
 .toparea__main-left
   float: left
+  width: percentage(480/940)
   max-width: 350px
 .toparea__main-right
   float: right
-  max-width: 500px
+  width: percentage(460/940)
 
 .header
   position: absolute
@@ -71,16 +72,45 @@
   display: inline-block
   vertical-align: middle
   color: #FFF
+  +t(color)
   .lang:hover &
     color: $orange
 
 .lang__list
   display: none
+  width: 180px
+  border-radius: $radius
+  background: #FFF
+  padding: 20px
+  box-sizing: border-box
   position: absolute
+  z-index: 10
   top: 100%
-  left: 0
-  .lang:hover &
-    display: block
+  left: 50%
+  margin-top: 20px
+  margin-left: -90px
+  li
+    text-align: center
+    border-bottom: 1px solid $border
+    padding: 2px 0
+    &:last-child
+      border-bottom: none
+    // &:hover, &.is-active
+    //   border-color: #FFF
+    //   a
+    //     background: #105C9B
+    //     color: #FFF
+    a
+      display: block
+      color: $text
+      text-decoration: none
+      font-size: 13px
+      line-height: 35px
+      border-radius: $radius
+      +t
+      &:hover
+        background: #105C9B
+        color: #FFF
 
 .lang__icon
   display: inline-block
@@ -106,6 +136,7 @@
     +semibold
     color: #FFF
     text-decoration: none
+    +t
     &:hover
       color: $orange
 
@@ -129,12 +160,23 @@
   li
     display: inline-block
     vertical-align: middle
+    position: relative
     width: 33.33%
     box-sizing: border-box
     text-align: center
     font-size: 15px
     strong
       font-weight: normal
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      right: -15px
+      margin-top: -3px
+      +s(arrow)
+    &:last-child
+      &:after
+        display: none
 
 .figure
   display: table
@@ -177,6 +219,8 @@
     font-style: normal
 
 .title
+  margin: 0 auto 35px
+  text-align: center
   font-size: 25px
   line-height: 1
 
@@ -185,3 +229,184 @@
   font-weight: normal
   font-size: 40px
   line-height: 1.1
+
+.form
+  padding: 20px
+  box-sizing: border-box
+  width: 100%
+  max-width: 460px
+  background: #105C9B
+  background: rgba(#105C9B, 0.7)
+  border-radius: $radius
+
+.form__link
+  line-height: 40px
+  text-align: right
+  a
+    display: inline-block
+    text-decoration: none
+    color: #FFF
+    font-size: 13px
+    line-height: 1
+    +t(color)
+    &:hover
+      color: $orange
+
+.form__field
+  margin: 20px 0
+  position: relative
+  &:last-child
+    margin-bottom: 0
+  &:first-child
+    margin-top: 0
+  .icon
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 40px
+    line-height: 40px
+    text-align: center
+    color: #B4CEE1
+
+.form__field_code
+  margin-left: percentage(-7/420)
+  margin-right: percentage(-7/420)
+  .icon
+    right: percentage(7/420)
+
+.form_contact
+  max-width: 610px
+  padding: 35px 25px 25px
+  margin: auto
+  background: #F8F8F8
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    z-index: -1
+    top: -5px
+    left: -5px
+    right: -5px
+    bottom: -5px
+    border-radius: $radius
+    +background-image(repeating-linear-gradient(-45deg,#FBA942 0,#FBA942 8px,#F8F8F8 8px,#F8F8F8 16px,#6C9EC3 16px,#6C9EC3 24px,#F8F8F8 24px,#F8F8F8 32px))
+    background-position: bottom right
+  > .btn
+    display: block
+    margin: auto
+//for chrome
+.chrome .form_contact:after
+  background-size: 46px 46px
+
+
+.how-it-works
+  padding: 100px 0
+  .title
+    margin-bottom: 80px
+
+.step
+  text-align: center
+  max-width: 270px
+  margin: auto
+
+.step__icon
+  height: 135px
+  position: relative
+  text-align: center
+
+.step__title
+  font-weight: normal
+  font-size: 20px
+  line-height: 1
+
+.step__text
+  color: $gray-text
+  margin-top: 20px
+
+
+.where-to-by
+  padding-top: 35px
+  position: relative
+  border-top: 1px solid $border
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 50%
+    margin: -30px 0 0 -15px
+    +s(mark)
+
+.map
+  height: 600px
+  overflow: hidden
+  position: relative
+
+.map__search
+  position: absolute
+  top: 40px
+  left: 0
+  right: 0
+  max-width: 620px
+  padding: 5px
+  box-sizing: border-box
+  height: 50px
+  margin: auto
+  background: rgba(#213748, 0.15)
+  border-radius: $radius
+  .icon
+    position: absolute
+    top: 0
+    right: 5px
+    bottom: 0
+    text-align: center
+    width: 40px
+    line-height: 50px
+
+.contact
+  padding: 60px 0 52px
+  .title
+    margin-bottom: 43px
+
+.info
+  margin-top: 70px
+  max-width: 100%
+  text-align: center
+  color: $gray-text
+  line-height: 2
+  a
+    color: #00599e
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.info__divider
+  display: inline-block
+  margin: 0 20px
+
+
+.footer
+  padding: 32px 0 29px
+  border-top: 1px solid $border
+  font-size: 13px
+  color: $gray-text
+  +clr
+
+.footer__left
+  display: block
+  float: left
+
+.footer__right
+  display: block
+  float: right
+  a
+    color: #000
+    text-decoration: none
+    +bold
+    em
+      color: $orange
+      font-style: normal
+
+.footer__center
+  display: block
+  text-align: center

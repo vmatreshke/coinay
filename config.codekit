@@ -20,13 +20,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/icons-s194e924b41.png": {
+	"\/img\/icons-s935fe43bda.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 0,
-		"inputAbbreviatedPath": "\/img\/icons-s194e924b41.png",
-		"outputAbbreviatedPath": "\/img\/icons-s194e924b41.png",
+		"inputAbbreviatedPath": "\/img\/icons-s935fe43bda.png",
+		"outputAbbreviatedPath": "\/img\/icons-s935fe43bda.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -53,28 +53,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons\/buy-voucher.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1221,
-		"inputAbbreviatedPath": "\/img\/icons\/buy-voucher.png",
-		"outputAbbreviatedPath": "\/img\/icons\/buy-voucher.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/icons\/buy-voucher2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2077,
-		"inputAbbreviatedPath": "\/img\/icons\/buy-voucher2x.png",
-		"outputAbbreviatedPath": "\/img\/icons\/buy-voucher2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/icons\/buy.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -93,28 +71,6 @@
 		"initialSize": 793,
 		"inputAbbreviatedPath": "\/img\/icons\/buy2x.png",
 		"outputAbbreviatedPath": "\/img\/icons\/buy2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/icons\/check.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1703,
-		"inputAbbreviatedPath": "\/img\/icons\/check.png",
-		"outputAbbreviatedPath": "\/img\/icons\/check.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/icons\/check2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1952,
-		"inputAbbreviatedPath": "\/img\/icons\/check2x.png",
-		"outputAbbreviatedPath": "\/img\/icons\/check2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -159,28 +115,6 @@
 		"initialSize": 1039,
 		"inputAbbreviatedPath": "\/img\/icons\/coderiver.png",
 		"outputAbbreviatedPath": "\/img\/icons\/coderiver.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/icons\/get-bitcoin2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5150,
-		"inputAbbreviatedPath": "\/img\/icons\/get-bitcoin2x.png",
-		"outputAbbreviatedPath": "\/img\/icons\/get-bitcoin2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/icons\/get-bitcoins.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2325,
-		"inputAbbreviatedPath": "\/img\/icons\/get-bitcoins.png",
-		"outputAbbreviatedPath": "\/img\/icons\/get-bitcoins.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -240,24 +174,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons\/redeem-voucher.png": {
+	"\/img\/icons\/mark.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 462,
-		"inputAbbreviatedPath": "\/img\/icons\/redeem-voucher.png",
-		"outputAbbreviatedPath": "\/img\/icons\/redeem-voucher.png",
+		"initialSize": 1703,
+		"inputAbbreviatedPath": "\/img\/icons\/mark.png",
+		"outputAbbreviatedPath": "\/img\/icons\/mark.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons\/redeem-voucher2x.png": {
+	"\/img\/icons\/mark2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 842,
-		"inputAbbreviatedPath": "\/img\/icons\/redeem-voucher2x.png",
-		"outputAbbreviatedPath": "\/img\/icons\/redeem-voucher2x.png",
+		"initialSize": 1952,
+		"inputAbbreviatedPath": "\/img\/icons\/mark2x.png",
+		"outputAbbreviatedPath": "\/img\/icons\/mark2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -269,6 +203,72 @@
 		"initialSize": 1210,
 		"inputAbbreviatedPath": "\/img\/icons\/search2x.png",
 		"outputAbbreviatedPath": "\/img\/icons\/search2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/step-one.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1221,
+		"inputAbbreviatedPath": "\/img\/icons\/step-one.png",
+		"outputAbbreviatedPath": "\/img\/icons\/step-one.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/step-one2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2077,
+		"inputAbbreviatedPath": "\/img\/icons\/step-one2x.png",
+		"outputAbbreviatedPath": "\/img\/icons\/step-one2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/step-three.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2325,
+		"inputAbbreviatedPath": "\/img\/icons\/step-three.png",
+		"outputAbbreviatedPath": "\/img\/icons\/step-three.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/step-three2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5150,
+		"inputAbbreviatedPath": "\/img\/icons\/step-three2x.png",
+		"outputAbbreviatedPath": "\/img\/icons\/step-three2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/step-two.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 462,
+		"inputAbbreviatedPath": "\/img\/icons\/step-two.png",
+		"outputAbbreviatedPath": "\/img\/icons\/step-two.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/step-two2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 842,
+		"inputAbbreviatedPath": "\/img\/icons\/step-two2x.png",
+		"outputAbbreviatedPath": "\/img\/icons\/step-two2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -306,13 +306,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/toparea-bg2x.png": {
-		"fileType": 32768,
+	"\/img\/toparea-bg2x.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4.87764e+06,
-		"inputAbbreviatedPath": "\/img\/toparea-bg2x.png",
-		"outputAbbreviatedPath": "\/img\/toparea-bg2x.png",
+		"initialSize": 474591,
+		"inputAbbreviatedPath": "\/img\/toparea-bg2x.jpg",
+		"outputAbbreviatedPath": "\/img\/toparea-bg2x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -431,6 +431,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/lib\/slick.min.js",
 		"outputAbbreviatedPath": "\/js\/lib\/min\/slick.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/common-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/common-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/common-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

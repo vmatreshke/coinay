@@ -14,6 +14,7 @@
 
   <!-- BEGIN  out-->
   <div class="out">
+
     <!-- BEGIN toparea -->
     <div class="toparea">
       <!-- BEGIN toparea__inner -->
@@ -26,9 +27,11 @@
                 <span class="lang__current">Eng</span>
                 <i class="lang__icon"></i>
                 <ul class="lang__list">
-                  <li><a href="#">Eng</a></li>
-                  <li><a href="#">Eng</a></li>
-                  <li><a href="#">Eng</a></li>
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">German</a></li>
+                  <li><a href="#">French</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">Russian</a></li>
                 </ul>
               </div>
               <nav class="nav">
@@ -52,12 +55,48 @@
               </div>
               <div class="toparea__main-right">
                 <!-- BEGIN form -->
-                <div class="form">
+                <form class="form">
                   <strong class="form__title">Coinay voucher code</strong>
                   <div class="form__field form__field_code">
-
+                    <div class="grid grid_four grid_code">
+                      <div class="grid__cell">
+                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                      </div>
+                      <div class="grid__cell">
+                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                      </div>
+                      <div class="grid__cell">
+                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                      </div>
+                      <div class="grid__cell">
+                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                        <i class="icon icon-code"></i>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="form__field">
+                    <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
+                    <i class="icon icon-wallet"></i>
+                  </div>
+                  <div class="form__field">
+                    <input type="text" class="input" placeholder="Your name">
+                    <i class="icon icon-user"></i>
+                  </div>
+                  <div class="form__field">
+                    <input type="email" class="input" placeholder="Email address">
+                    <i class="icon icon-mail"></i>
+                  </div>
+                  <div class="grid grid_two">
+                    <div class="grid__cell">
+                      <button type="submit" class="btn">Redeem</button>
+                    </div>
+                    <div class="grid__cell">
+                      <div class="form__link">
+                        <a href="#">No bitcoin wallet address?</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
                 <!-- END form -->
               </div>
             </div>
@@ -69,19 +108,19 @@
               <ul class="line__list">
                 <li>
                   <div class="figure">
-                    <div class="figure__icon"><i class="icon-buy"></i></div>
+                    <div class="figure__icon"><i class="icon icon-buy"></i></div>
                     <div class="figure__text">Buy coinay bitcoin vouchers in stores</div>
                   </div>
                 </li>
                 <li>
                   <div class="figure">
-                    <div class="figure__icon"><i class="icon-code"></i></div>
+                    <div class="figure__icon"><i class="icon icon-code"></i></div>
                     <div class="figure__text">Enter voucher code here</div>
                   </div>
                 </li>
                 <li>
                   <div class="figure">
-                    <div class="figure__icon"><i class="icon-wallet"></i></div>
+                    <div class="figure__icon"><i class="icon icon-wallet"></i></div>
                     <div class="figure__text">Get bitcoins to your wallet</div>
                   </div>
                 </li>
@@ -93,6 +132,97 @@
       <!-- END toparea__inner -->
     </div>
     <!-- END toparea -->
+
+    <!-- BEGIN how-it-works -->
+    <div class="how-it-works">
+      <div class="l">
+        <h2 class="title">How you get bitcoin <br> with coinay</h2>
+        <div class="grid grid_three">
+          <div class="grid__cell">
+            <div class="step">
+              <div class="step__icon"><i class="icon-step-one"></i></div>
+              <strong class="step__title">Buy voucher <br> at Coinay locations</strong>
+              <p class="step__text">Use the map to find the nearest location. 25 €, 50 €, and 100 € available</p>
+            </div>
+          </div>
+          <div class="grid__cell">
+            <div class="step">
+              <div class="step__icon"><i class="icon-step-two"></i></div>
+              <strong class="step__title">Redeem <br> Voucher here</strong>
+              <p class="step__text">Redeem coinay voucher whenever you like. The bitcoin exchange rate is fixed when you redeem</p>
+            </div>
+          </div>
+          <div class="grid__cell">
+            <div class="step">
+              <div class="step__icon"><i class="icon-step-three"></i></div>
+              <strong class="step__title">Get <br> Bitcoins!</strong>
+              <p class="step__text">Get bitcoins to your wallet within 4h after redemption</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END how-it-works -->
+
+    <!-- BEGIN where-to-by -->
+    <div class="where-to-by">
+      <h2 class="title">Find stores to <br> buy coinay vouchers</h2>
+      <div class="map">
+        <div class="map__search">
+          <input type="text" placeholder="Your City" class="input input_search">
+          <button class="icon icon-search"></button>
+        </div>
+        <img src="http://placehold.it/1400x600"/>
+      </div>
+    </div>
+    <!-- END where-to-by -->
+
+    <!-- BEGIN contact -->
+    <div class="contact">
+      <div class="l">
+        <h2 class="title">Contact us with questions <br> and feedback</h2>
+        <!-- BEGIN form -->
+        <form class="form form_contact">
+          <div class="form__field">
+            <input type="text" placeholder="Your Name" class="input">
+            <i class="icon icon-user"></i>
+          </div>
+          <div class="form__field">
+            <input type="email" placeholder="Email address" class="input">
+            <i class="icon icon-mail"></i>
+          </div>
+          <div class="form__field">
+            <input type="text" placeholder="Subject" class="input">
+            <i class="icon icon-subject"></i>
+          </div>
+          <div class="form__field">
+            <textarea placeholder="Text" class="input"></textarea>
+            <i class="icon icon-text"></i>
+          </div>
+          <button type="submit" class="btn btn_blue">Submit Message</button>
+        </form>
+        <!-- END form -->
+        <!-- BEGIN info -->
+        <div class="info">
+          <p>With your redemption, you agree to confirm with our</p>
+          <p><a href="#">Privacy policy</a><span class="info__divider">•</span><a href="#">Terms & conditions</a></p>
+          <p>Contact us with any questions!</p>
+        </div>
+        <!-- END info -->
+      </div>
+    </div>
+    <!-- END contact -->
+
+    <!-- BEGIN footer -->
+    <footer class="footer">
+      <div class="l">
+        <span class="footer__left">© coinay, 2014</span>
+        <span class="footer__right"><i>Powered by</i> <a href="#">bit<em>4</em>coin</a></span>
+        <span class="footer__center">GFT Ventures Ltd, 14 New Street, EC2M 4HE London, United Kingdom</span>
+      </div>
+    </footer>
+    <!-- END footer -->
+
   </div>
   <!-- END out-->
 
