@@ -3,10 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>coinay</title>
-  <meta name="viewport" content="initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <!-- <meta name="viewport" content="width=1200"> -->
-  <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+  <meta name="viewport" content="initial-scale=1, user-scalable=no">
   <link rel="stylesheet" media="all" href="css/screen.css" >
   <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
@@ -23,25 +21,28 @@
           <header class="header">
             <div class="l">
               <a href="index.html" class="logo">coinhay<sup>tm</sup></a>
-              <div class="lang">
-                <span class="lang__current">Eng</span>
-                <i class="lang__icon"></i>
-                <ul class="lang__list">
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">German</a></li>
-                  <li><a href="#">French</a></li>
-                  <li><a href="#">Spanish</a></li>
-                  <li><a href="#">Russian</a></li>
-                </ul>
+              <div class="header__menu">
+                <nav class="nav">
+                  <ul>
+                    <li><a href="#">Redeem</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Where to buy</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </nav>
+                <div class="lang">
+                  <span class="lang__current">Eng</span>
+                  <i class="lang__icon"></i>
+                  <ul class="lang__list">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">German</a></li>
+                    <li><a href="#">French</a></li>
+                    <li><a href="#">Spanish</a></li>
+                    <li><a href="#">Russian</a></li>
+                  </ul>
+                </div>
               </div>
-              <nav class="nav">
-                <ul>
-                  <li><a href="#">Redeem</a></li>
-                  <li><a href="#">How it works</a></li>
-                  <li><a href="#">Where to buy</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
+              <button class="menu-btn"></button>
             </div>
           </header>
           <!-- END header -->
@@ -53,25 +54,23 @@
                 <div class="voucher"></div>
                 <span class="exchange">1 <em>btc</em> = 400 eur</span>
               </div>
-              <div class="toparea__main-right">
+              <div class="toparea__main-right hide-on-mobile">
                 <!-- BEGIN form -->
                 <form class="form">
                   <strong class="form__title">Coinay voucher code</strong>
                   <div class="form__field form__field_code">
-                    <div class="grid grid_four grid_code">
-                      <div class="grid__cell">
-                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                      </div>
-                      <div class="grid__cell">
-                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                      </div>
-                      <div class="grid__cell">
-                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                      </div>
-                      <div class="grid__cell">
-                        <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                        <i class="icon icon-code"></i>
-                      </div>
+                    <div class="form__field-cell">
+                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                    </div>
+                    <div class="form__field-cell">
+                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                    </div>
+                    <div class="form__field-cell">
+                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                    </div>
+                    <div class="form__field-cell">
+                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+                      <i class="icon icon-code"></i>
                     </div>
                   </div>
                   <div class="form__field">
@@ -86,14 +85,12 @@
                     <input type="email" class="input" placeholder="Email address">
                     <i class="icon icon-mail"></i>
                   </div>
-                  <div class="grid grid_two">
-                    <div class="grid__cell">
+                  <div class="form__footer">
+                    <div class="form__footer-left">
                       <button type="submit" class="btn">Redeem</button>
                     </div>
-                    <div class="grid__cell">
-                      <div class="form__link">
-                        <a href="#">No bitcoin wallet address?</a>
-                      </div>
+                    <div class="form__footer-right">
+                      <div class="form__link"><a href="#">No bitcoin wallet address?</a></div>
                     </div>
                   </div>
                 </form>
@@ -133,33 +130,81 @@
     </div>
     <!-- END toparea -->
 
+    <!-- BEGIN show-on-mobile -->
+    <div class="show-on-mobile">
+      <div class="l">
+        <h2 class="title title_margin">Redeem <br> coinay voucher</h2>
+        <!-- BEGIN form -->
+        <form class="form form_solid-bg">
+          <strong class="form__title">Coinay voucher code</strong>
+          <div class="form__field form__field_code">
+            <div class="form__field-cell">
+              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+            </div>
+            <div class="form__field-cell">
+              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+            </div>
+            <div class="form__field-cell">
+              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+            </div>
+            <div class="form__field-cell">
+              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
+              <i class="icon icon-code"></i>
+            </div>
+          </div>
+          <div class="form__field">
+            <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
+            <i class="icon icon-wallet"></i>
+          </div>
+          <div class="form__field">
+            <input type="text" class="input" placeholder="Your name">
+            <i class="icon icon-user"></i>
+          </div>
+          <div class="form__field">
+            <input type="email" class="input" placeholder="Email address">
+            <i class="icon icon-mail"></i>
+          </div>
+          <div class="form__footer">
+            <div class="form__footer-left">
+              <button type="submit" class="btn">Redeem</button>
+            </div>
+            <div class="form__footer-right">
+              <div class="form__link"><a href="#">No bitcoin wallet address?</a></div>
+            </div>
+          </div>
+        </form>
+        <!-- END form -->
+      </div>
+    </div>
+    <!-- END show-on-mobile -->
+
     <!-- BEGIN how-it-works -->
     <div class="how-it-works">
       <div class="l">
         <h2 class="title">How you get bitcoin <br> with coinay</h2>
-        <div class="grid grid_three">
-          <div class="grid__cell">
+        <ul class="step-list">
+          <li class="step-list__item">
             <div class="step">
               <div class="step__icon"><i class="icon-step-one"></i></div>
               <strong class="step__title">Buy voucher <br> at Coinay locations</strong>
               <p class="step__text">Use the map to find the nearest location. 25 €, 50 €, and 100 € available</p>
             </div>
-          </div>
-          <div class="grid__cell">
+          </li>
+          <li class="step-list__item">
             <div class="step">
               <div class="step__icon"><i class="icon-step-two"></i></div>
               <strong class="step__title">Redeem <br> Voucher here</strong>
               <p class="step__text">Redeem coinay voucher whenever you like. The bitcoin exchange rate is fixed when you redeem</p>
             </div>
-          </div>
-          <div class="grid__cell">
+          </li>
+          <li class="step-list__item">
             <div class="step">
               <div class="step__icon"><i class="icon-step-three"></i></div>
               <strong class="step__title">Get <br> Bitcoins!</strong>
               <p class="step__text">Get bitcoins to your wallet within 4h after redemption</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- END how-it-works -->
@@ -183,13 +228,15 @@
         <h2 class="title">Contact us with questions <br> and feedback</h2>
         <!-- BEGIN form -->
         <form class="form form_contact">
-          <div class="form__field">
-            <input type="text" placeholder="Your Name" class="input">
-            <i class="icon icon-user"></i>
-          </div>
-          <div class="form__field">
-            <input type="email" placeholder="Email address" class="input">
-            <i class="icon icon-mail"></i>
+          <div class="form__field form__field_two">
+            <div class="form__field-cell">
+              <input type="text" placeholder="Your Name" class="input">
+              <i class="icon icon-user"></i>
+            </div>
+            <div class="form__field-cell">
+              <input type="email" placeholder="Email address" class="input">
+              <i class="icon icon-mail"></i>
+            </div>
           </div>
           <div class="form__field">
             <input type="text" placeholder="Subject" class="input">
@@ -202,13 +249,13 @@
           <button type="submit" class="btn btn_blue">Submit Message</button>
         </form>
         <!-- END form -->
-        <!-- BEGIN info -->
-        <div class="info">
+        <!-- BEGIN privacy -->
+        <div class="privacy">
           <p>With your redemption, you agree to confirm with our</p>
-          <p><a href="#">Privacy policy</a><span class="info__divider">•</span><a href="#">Terms & conditions</a></p>
+          <p><a href="#">Privacy policy</a><span class="privacy__divider">•</span><a href="#">Terms & conditions</a></p>
           <p>Contact us with any questions!</p>
         </div>
-        <!-- END info -->
+        <!-- END privacy -->
       </div>
     </div>
     <!-- END contact -->
@@ -216,15 +263,19 @@
     <!-- BEGIN footer -->
     <footer class="footer">
       <div class="l">
-        <span class="footer__left">© coinay, 2014</span>
-        <span class="footer__right"><i>Powered by</i> <a href="#">bit<em>4</em>coin</a></span>
-        <span class="footer__center">GFT Ventures Ltd, 14 New Street, EC2M 4HE London, United Kingdom</span>
+        <span class="footer__address">GFT Ventures Ltd, 14 New Street, EC2M 4HE London, United Kingdom</span>
+        <div class="footer__info">
+          <span class="copy">© coinay, 2014</span>
+          <span class="creator"><i>Powered by</i> <a href="#">bit<em>4</em>coin</a></span>
+        </div>
       </div>
     </footer>
     <!-- END footer -->
 
   </div>
   <!-- END out-->
+
+  <div class="overlay"></div>
 
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>

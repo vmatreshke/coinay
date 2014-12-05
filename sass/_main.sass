@@ -13,20 +13,33 @@
   background-image: url('../img/toparea-bg.jpg')
   +retina
     background-image: url('../img/toparea-bg2x.jpg')
+  +mob
+    height: auto
 
 .toparea__inner
   display: table-cell
   position: relative
   vertical-align: middle
-  padding: 110px 0
+  padding: 125px 0
   background: rgba(#0B3250, 0.7)
+  +mob
+    padding: 0
 
 .toparea__main
   +clr
+
 .toparea__main-left
   float: left
   width: percentage(480/940)
   max-width: 350px
+  box-sizing: border-box
+  +mob
+    float: none
+    width: 100%
+    max-width: none
+    margin: auto
+    padding: 0 15px
+
 .toparea__main-right
   float: right
   width: percentage(460/940)
@@ -39,11 +52,33 @@
   padding: 40px 0 20px
   line-height: 1
   +clr
+  +mob
+    position: static
+    padding: 11px 0 35px
+
+.header__menu
+  float: right
+  font-size: 0
+  +mob
+    opacity: 0
+    +transform(translateY(-110%))
+    position: absolute
+    z-index: 10
+    padding: 65px 0 40px
+    top: 0
+    left: 0
+    right: 0
+    background: #105C9B
+    +tr(all 0.2s 0.01 linear)
+    &.is-visible
+      opacity: 1
+      +transform(translateY(0))
 
 .logo
   float: left
   display: inline-block
   position: relative
+  z-index: 11
   margin-top: -15px
   color: $orange
   font-size: 35px
@@ -58,15 +93,28 @@
     left: 100%
     font-size: 10px
     text-transform: uppercase
+  +mob
+    margin: -6px 0 0 10px
 
 .lang
-  float: right
+  display: inline-block
+  vertical-align: middle
   position: relative
   font-size: 13px
-  margin: -2px 0 0 30px
+  margin: 1px 0 0 30px
   color: #FFF
   color: $orange
   cursor: pointer
+  +mob
+    display: block
+    text-align: center
+    margin: 10px 0 0
+    +tap
+    .lang__list
+      left: 50%
+      right: auto
+      margin-left: -90px
+      +transform(translateY(-50%))
 
 .lang__current
   display: inline-block
@@ -111,18 +159,28 @@
       &:hover
         background: #105C9B
         color: #FFF
+  +r(1100)
+    left: auto
+    right: 0
+    margin-left: 0
 
 .lang__icon
   display: inline-block
   vertical-align: middle
   margin-left: 10px
   +s(lang)
+  +retina
+    +sr(lang2x)
   .lang:hover &
     +s(lang-h)
+    +retina
+      +sr(lang-h2x)
+
 
 .nav
-  float: right
   font-size: 14px
+  display: inline-block
+  vertical-align: middle
   ul
     font-size: 0
   li
@@ -139,6 +197,18 @@
     +t
     &:hover
       color: $orange
+  +mob
+    display: block
+    ul
+      display: block
+    li
+      display: block
+      margin: 0
+    a
+      display: block
+      text-align: center
+      padding: 14px 0
+      +tap
 
 .line
   position: absolute
@@ -151,8 +221,12 @@
   background: $blue
   color: #FFF
   font-size: 0
-  // [class^="icon-"]
-  //   font-size: 16px
+  +mob
+    position: static
+    margin-top: 35px
+    padding: 20px 0
+    height: auto
+    line-height: 1
 
 .line__list
   display: inline-block
@@ -177,15 +251,30 @@
     &:last-child
       &:after
         display: none
+  +mob
+    display: block
+    li
+      vertical-align: top
+      &:after
+        display: none
 
 .figure
   display: table
   table-layout: fixed
   text-align: left
   line-height: 1
-  .line &
-    max-width: 170px
-    margin: auto
+  max-width: 170px
+  margin: auto
+  +mob
+    display: block
+    padding: 0 10px
+    .figure__icon
+      display: block
+      height: 30px
+    .figure__text
+      display: block
+      font-size: 12px
+      line-height: 1.25
 
 .figure__icon
   display: table-cell
@@ -197,16 +286,24 @@
   vertical-align: middle
 
 .voucher
-  width: 309px
-  height: 208px
+  position: relative
+  width: 100%
+  max-width: 309px
   margin: 40px 0 0 -10px
-  background-image: url('../img/voucher.png')
-  background-repeat: no-repeat
-  +retina
-    background-image: url('../img/voucher2x.png')
-    -webkit-background-size: 309px 208px
-    -o-background-size: 309px 208px
-    background-size: 309px 208px
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    padding-bottom: 67.314%
+    background-image: url('../img/voucher.png')
+    background-size: cover
+    background-repeat: no-repeat
+    +retina
+      background-image: url('../img/voucher2x.png')
+  +r(980)
+    margin-left: 0
+  +mob
+    margin: 11px auto
 
 .exchange
   display: block
@@ -217,30 +314,49 @@
   em
     color: $orange
     font-style: normal
+  +mob
+    margin: 10px 0 0
+    text-align: center
 
 .title
   margin: 0 auto 35px
   text-align: center
   font-size: 25px
   line-height: 1
+  font-weight: normal
+  &.title_margin
+    margin-top: 38px
 
 .title-head
   +light
   font-weight: normal
   font-size: 40px
   line-height: 1.1
+  +mob
+    font-size: 25px
+    text-align: center
+
 
 .form
   padding: 20px
   box-sizing: border-box
   width: 100%
   max-width: 460px
+  margin: auto
   background: #105C9B
   background: rgba(#105C9B, 0.7)
   border-radius: $radius
 
+.form__title
+  display: block
+  color: #FFF
+  font-size: 13px
+  line-height: 1
+  font-weight: normal
+  &.form__title_big
+    font-size: 20px
+
 .form__link
-  line-height: 40px
   text-align: right
   a
     display: inline-block
@@ -251,6 +367,8 @@
     +t(color)
     &:hover
       color: $orange
+  +r(400)
+    text-align: left
 
 .form__field
   margin: 20px 0
@@ -268,12 +386,89 @@
     line-height: 40px
     text-align: center
     color: #B4CEE1
+    pointer-events: none
+  &.is-error
+    .input
+      background: #FEE7E7
+      border-color: #FEE7E7
+      color: #ff4545
+      &:focus
+        border-color: $orange
+    .icon
+      color: #FBB6B7
+    .form__error
+      display: block
+
+.form__error
+  display: none
+  position: absolute
+  z-index: 2
+  top: 100%
+  left: 0
+  width: 140px
+  box-sizing: border-box
+  padding: 7px 10px
+  margin-top: 10px
+  border-radius: $radius
+  box-shadow: 3px 4px 5px rgba(130, 19, 19, 0.14)
+  background: #FCC7C8
+  font-size: 12px
+  line-height: 1.1
+  color: #ff4545
+  &:before
+    content: ""
+    position: absolute
+    bottom: 100%
+    left: 18px
+    +arr(11,6,#FCC7C8,t)
+
+.form__footer
+  display: table
+  table-layout: fixed
+  width: 100%
+  margin-top: 20px
+
+.form__footer-left
+  display: table-cell
+  vertical-align: middle
+  width: 60%
+
+.form__footer-right
+  display: table-cell
+  vertical-align: middle
+
+
+.form__field-cell
+  display: inline-block
+  vertical-align: top
+  box-sizing: border-box
+  position: relative
 
 .form__field_code
   margin-left: percentage(-7/420)
   margin-right: percentage(-7/420)
+  font-size: 0
+  .form__field-cell
+    width: 25%
+    padding: 0 percentage(7/420)
   .icon
     right: percentage(7/420)
+
+.form__field_two
+  margin-left: percentage(-20/560)
+  font-size: 0
+  .form__field-cell
+    width: 50%
+    padding-left: percentage(20/560)
+  +mob
+    margin-left: 0
+    .form__field-cell
+      width: 100%
+      padding-left: 0
+      margin-top: 20px
+      &:first-child
+        margin-top: 0
+
 
 .form_contact
   max-width: 610px
@@ -290,20 +485,46 @@
     right: -5px
     bottom: -5px
     border-radius: $radius
-    +background-image(repeating-linear-gradient(-45deg,#FBA942 0,#FBA942 8px,#F8F8F8 8px,#F8F8F8 16px,#6C9EC3 16px,#6C9EC3 24px,#F8F8F8 24px,#F8F8F8 32px))
+    +background-image(repeating-linear-gradient(-45deg,#FBA942 0,#FBA942 6px,#F8F8F8 6px,#F8F8F8 12px,#6C9EC3 12px,#6C9EC3 18px,#F8F8F8 18px,#F8F8F8 24px))
     background-position: bottom right
   > .btn
     display: block
     margin: auto
+  +mob
+    padding-right: 15px
+    padding-left: 15px
 //for chrome
 .chrome .form_contact:after
-  background-size: 46px 46px
+  background-size: 34px 34px
+
+.form_solid-bg
+  background: #105C9B
 
 
 .how-it-works
   padding: 100px 0
   .title
     margin-bottom: 80px
+  +mob
+    padding: 80px 0 90px
+    .title
+      margin-bottom: 60px
+
+.step-list
+  font-size: 0
+
+.step-list__item
+  display: inline-block
+  vertical-align: top
+  width: 33.33%
+  box-sizing: border-box
+  padding: 0 10px
+  +mob
+    display: block
+    width: auto
+    margin-top: 55px
+    &:first-child
+      margin-top: 0
 
 .step
   text-align: center
@@ -314,6 +535,9 @@
   height: 135px
   position: relative
   text-align: center
+  +mob
+    height: auto
+    margin-bottom: 35px
 
 .step__title
   font-weight: normal
@@ -323,6 +547,7 @@
 .step__text
   color: $gray-text
   margin-top: 20px
+  font-size: 15px
 
 
 .where-to-by
@@ -336,17 +561,21 @@
     left: 50%
     margin: -30px 0 0 -15px
     +s(mark)
+    +retina
+      +sr(mark2x)
 
 .map
   height: 600px
   overflow: hidden
   position: relative
+  +mob
+    height: 450px
 
 .map__search
   position: absolute
   top: 40px
-  left: 0
-  right: 0
+  left: 10px
+  right: 10px
   max-width: 620px
   padding: 5px
   box-sizing: border-box
@@ -368,7 +597,7 @@
   .title
     margin-bottom: 43px
 
-.info
+.privacy
   margin-top: 70px
   max-width: 100%
   text-align: center
@@ -380,25 +609,50 @@
     &:hover
       text-decoration: underline
 
-.info__divider
+.privacy__divider
   display: inline-block
   margin: 0 20px
 
 
 .footer
+  position: relative
   padding: 32px 0 29px
   border-top: 1px solid $border
   font-size: 13px
   color: $gray-text
   +clr
+  .l
+    position: relative
 
-.footer__left
+.footer__info
+  position: absolute
+  top: 0px
+  left: 10px
+  right: 10px
+  +clr
+  +mob
+    position: static
+    margin-top: 25px
+
+.footer__address
+  display: block
+  text-align: center
+  margin: 0 26%
+  +mob
+    margin: 0 40px
+
+.copy
   display: block
   float: left
+  width: 25%
+  +mob
+    width: 48%
 
-.footer__right
+.creator
   display: block
   float: right
+  width: 25%
+  text-align: right
   a
     color: #000
     text-decoration: none
@@ -406,7 +660,69 @@
     em
       color: $orange
       font-style: normal
+  +mob
+    width: 48%
 
-.footer__center
-  display: block
+
+.confirm
+  margin: 5px 0
+  font-size: 13px
+  line-height: 1.15
+  color: #FFF
+
+.confirm__row
+  border-top: 1px solid #276BA4
+  padding: 12px 0
+  +clr
+  &:first-child
+    border-top: none
+
+.confirm__label
+  float: left
+  width: percentage(175/420)
+  color: #A5B6C8
+  box-sizing: border-box
+  padding-right: 10px
+  +r(400)
+    width: percentage(150/420)
+
+.confirm__content
+  float: right
+  width: percentage(245/420)
+  em
+    color: #A5B6C8
+    font-style: normal
+    margin-left: 5px
+  +r(400)
+    width: percentage(270/420)
+
+
+.info
+  display: table
+  table-layout: fixed
+  width: 100%
+  background-color: #033861
+  border-radius: $radius
+  color: #FFF
+
+.info__cell
+  display: table-cell
+  height: 60px
+  vertical-align: middle
   text-align: center
+  border-left: 1px solid #224D6F
+  &:first-child
+    border-left: none
+  &:first-child, &:last-child
+    width: percentage(150/420)
+
+.info__label
+  color: #A5B6C8
+  font-size: 12px
+
+.info__value
+  font-size: 20px
+  &.info__value_orange
+    color: #f19d06
+  +r(400)
+    font-size: 15px

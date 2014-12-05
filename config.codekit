@@ -20,13 +20,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/icons-s935fe43bda.png": {
+	"\/img\/icons-sa75a6f27a4.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 0,
-		"inputAbbreviatedPath": "\/img\/icons-s935fe43bda.png",
-		"outputAbbreviatedPath": "\/img\/icons-s935fe43bda.png",
+		"inputAbbreviatedPath": "\/img\/icons-sa75a6f27a4.png",
+		"outputAbbreviatedPath": "\/img\/icons-sa75a6f27a4.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -163,17 +163,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons\/mail-blie2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 891,
-		"inputAbbreviatedPath": "\/img\/icons\/mail-blie2x.png",
-		"outputAbbreviatedPath": "\/img\/icons\/mail-blie2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/icons\/mark.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -192,17 +181,6 @@
 		"initialSize": 1952,
 		"inputAbbreviatedPath": "\/img\/icons\/mark2x.png",
 		"outputAbbreviatedPath": "\/img\/icons\/mark2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/icons\/search2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1210,
-		"inputAbbreviatedPath": "\/img\/icons\/search2x.png",
-		"outputAbbreviatedPath": "\/img\/icons\/search2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
