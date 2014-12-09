@@ -16,6 +16,7 @@
       var mapOptions = {
         zoom: 17,
         disableDefaultUI: true,
+        scrollwheel: false,
         center: new google.maps.LatLng(40.4149025,-3.7037002)
       };
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -23,9 +24,9 @@
 
       var image = 'img/marker.png';
       var points = [
-        ['First point',  40.4153871, -3.7081734, 1],
-        ['Second point', 40.4150604, -3.7062288, 2],
-        ['Third point',  40.4153886, -3.7033086, 3],
+        ['First point',40.4153871,-3.7081734, 1],
+        ['Second point',40.4150604,-3.7062288, 2],
+        ['Third point',40.4153886,-3.7033086, 3],
       ];
 
       function setMarkers(map, locations) {
@@ -39,7 +40,7 @@
             title: point[0],
             zIndex: point[3]
           });
-        };
+        }
       }
 
       setMarkers(map, points);
@@ -65,10 +66,10 @@
               <div class="header__menu">
                 <nav class="nav">
                   <ul>
-                    <li><a href="#">Redeem</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Where to buy</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#redeem">Redeem</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#where-to-buy">Where to buy</a></li>
+                    <li><a href="#contact">Contact</a></li>
                   </ul>
                 </nav>
                 <div class="lang">
@@ -172,7 +173,7 @@
     <!-- END toparea -->
 
     <!-- BEGIN show-on-mobile -->
-    <div class="show-on-mobile">
+    <div name="redeem" class="show-on-mobile">
       <div class="l">
         <h2 class="title title_margin">Redeem <br> coinay voucher</h2>
         <!-- BEGIN form -->
@@ -220,7 +221,7 @@
     <!-- END show-on-mobile -->
 
     <!-- BEGIN how-it-works -->
-    <div class="how-it-works">
+    <div name="how-it-works" class="how-it-works">
       <div class="l">
         <h2 class="title">How you get bitcoin <br> with coinay</h2>
         <ul class="step-list">
@@ -250,8 +251,8 @@
     </div>
     <!-- END how-it-works -->
 
-    <!-- BEGIN where-to-by -->
-    <div class="where-to-by">
+    <!-- BEGIN where-to-buy -->
+    <div name="where-to-buy" class="where-to-buy">
       <h2 class="title">Find stores to <br> buy coinay vouchers</h2>
       <div class="map">
         <form class="map__search">
@@ -261,10 +262,10 @@
         <div id="map" class="map__body"></div>
       </div>
     </div>
-    <!-- END where-to-by -->
+    <!-- END where-to-buy -->
 
     <!-- BEGIN contact -->
-    <div class="contact">
+    <div name="contact" class="contact">
       <div class="l">
         <h2 class="title">Contact us with questions <br> and feedback</h2>
         <!-- BEGIN form -->

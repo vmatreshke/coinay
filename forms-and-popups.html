@@ -15,9 +15,9 @@
 
       var mapOptions = {
         zoom: 17,
-        // disableDefaultUI: true,
-        center: new google.maps.LatLng(40.4149025,-3.7037002),
-        scrollwheel: false
+        disableDefaultUI: true,
+        scrollwheel: false,
+        center: new google.maps.LatLng(40.4149025,-3.7037002)
       };
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -43,6 +43,28 @@
         }
       }
 
+      // google.maps.event.addListener(map, 'mouseover', function(event) {
+      //   if (window.innerWidth > 800) {
+      //     window.setTimeout(function() {
+      //       map.setOptions({
+      //         disableDefaultUI: false,
+      //         scrollwheel: true
+      //       });
+      //     }, 1000);
+      //   }
+      // });
+
+      // google.maps.event.addListener(map, 'mouseout', function(event) {
+      //   if (window.innerWidth > 800) {
+      //     window.setTimeout(function() {
+      //       map.setOptions({
+      //         disableDefaultUI: true,
+      //         scrollwheel: false
+      //       });
+      //     }, 1000);
+      //   }
+      // });
+
       setMarkers(map, points);
 
     }
@@ -67,10 +89,10 @@
               <div class="header__menu">
                 <nav class="nav">
                   <ul>
-                    <li><a href="#">Redeem</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Where to buy</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#redeem">Redeem</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#where-to-buy">Where to buy</a></li>
+                    <li><a href="#contact">Contact</a></li>
                   </ul>
                 </nav>
                 <div class="lang">
@@ -174,7 +196,7 @@
     <!-- END toparea -->
 
     <div class="l">
-      <h2 class="title title_margin">Redeem <br> coinay voucher</h2>
+      <h2 name="redeem" class="title title_margin">Redeem <br> coinay voucher</h2>
       <!-- BEGIN form -->
       <form class="form">
         <strong class="form__title">Coinay voucher code</strong>
@@ -341,7 +363,7 @@
     </div>
 
     <!-- BEGIN how-it-works -->
-    <div class="how-it-works">
+    <div name="how-it-works" class="how-it-works">
       <div class="l">
         <h2 class="title">How you get bitcoin <br> with coinay</h2>
         <ul class="step-list">
@@ -371,8 +393,8 @@
     </div>
     <!-- END how-it-works -->
 
-    <!-- BEGIN where-to-by -->
-    <div class="where-to-by">
+    <!-- BEGIN where-to-buy -->
+    <div name="where-to-buy" class="where-to-buy">
       <h2 class="title">Find stores to <br> buy coinay vouchers</h2>
       <div class="map">
         <div class="map__search">
@@ -382,10 +404,10 @@
         <div id="map" class="map__body"></div>
       </div>
     </div>
-    <!-- END where-to-by -->
+    <!-- END where-to-buy -->
 
     <!-- BEGIN contact -->
-    <div class="contact">
+    <div name="contact" class="contact">
       <div class="l">
         <h2 class="title">Contact us with questions <br> and feedback</h2>
         <!-- BEGIN form -->

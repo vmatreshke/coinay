@@ -60,13 +60,6 @@ body
   +regular
   font-size: 15px
   line-height: 1.5
-  &.no-scroll
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    overflow: hidden
 
 .overlay
   display: none
@@ -79,15 +72,6 @@ body
   background: rgba(#031B2C, 0.8)
   +mob
 
-
-
-//sprite icons
-// [class^="icon-"]
-//   display: inline-block
-//   position: relative
-// @each $s in buy,code,wallet
-//   .icon-#{$s}
-//     +s(#{$s})
 
 @each $s in step-one,step-two,step-three
   .icon-#{$s}
