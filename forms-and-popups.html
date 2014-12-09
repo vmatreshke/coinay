@@ -15,11 +15,11 @@
 
       var mapOptions = {
         zoom: 17,
-        disableDefaultUI: true,
+        // disableDefaultUI: true,
         center: new google.maps.LatLng(40.4149025,-3.7037002),
+        scrollwheel: false
       };
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
 
       var image = 'img/marker.png';
 
@@ -40,10 +40,11 @@
             title: point[0],
             zIndex: point[3]
           });
-        };
+        }
       }
 
       setMarkers(map, points);
+
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
