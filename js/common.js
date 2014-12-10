@@ -56,22 +56,6 @@ head.ready(function() {
     //mask for input bitcoin code
     $('.js-code').mask('0000-0000-0000-0000', {'translation': {0: {pattern: /[A-Za-z0-9]/}}});
 
-    // $('.js-code').on('focusout', function() {
-    //     var str = $(this).val();
-    //     console.log(str);
-    //     function newString(string) {
-    //         var newstring = '';
-    //         for (var i = 0; i <= string.length-1; i++) {
-    //             if (str[i] !== '-') {
-    //                 newstring += str[i];
-    //             }
-    //         }
-    //         return newstring;
-    //     }
-    //     var newstr = newString(str);
-    //     console.log(newstr);
-    // });
-
     $('.js-wallet').on('blur', function() {
         var wallet = $(this).val();
         console.log(wallet);
@@ -79,6 +63,28 @@ head.ready(function() {
             alert('xxx == ' + data);
             console.log(data);
         });
+    });
+
+    // custom select
+    $('.js-select').each(function() {
+        var select         = $(this),
+            wrapper        = select.parent(),
+            input           = select.siblings('input');
+
+        select.on('change', function() {
+            selectedOption = select.find('option:selected');
+            input.val(selectedOption.text());
+            input.trigger('change');
+        });
+
+        select.on('focus', function() {
+            input.addClass('is-active');
+        });
+
+        select.on('focusout', function() {
+            input.removeClass('is-active');
+        });
+
     });
 
     var toggleMenu = function() {
@@ -145,6 +151,7 @@ head.ready(function() {
             var form   = $(this),
                 btn    = form.find('button[type="submit"]'),
                 input  = form.find('input:not([type="checkbox"], [type="radio"]), textarea'),
+                select = form.find('.select'),
                 inputs = [],
                 status = []; // [false, false, false, true, ...]
 
@@ -188,8 +195,41 @@ head.ready(function() {
                     status[index] = check;
                     toggleSubmitBtn();
                 });
+                if (select.length !== 0) {
+                    $(currentElement).on('change', function() {
+                        var check = checkStatus($(currentElement));
+                        var index = inputs.indexOf(currentElement);
+                        status[index] = check;
+                        toggleSubmitBtn();
+                    });
+                }
+                // $(currentElement).on('blur', function(){
+                //     if (!checkStatus($(currentElement))) {
+                //         showInputError($(this));
+                //     }
+                // });
+                // $(currentElement).on('focus', function(){
+                //     hideInputError($(this));
+                // });
             });
         });
+
+
+        // var showInputError = function(input) {
+        //     var wrapper = input.parent(),
+        //         message = wrapper.find('.form__error');
+        //         wrapper.addClass('is-error');
+        //         message.fadeIn(300);
+        //         setTimeout(function(){
+        //             message.fadeOut(200);
+        //         }, 5000);
+        // };
+        // var hideInputError = function(input) {
+        //     var wrapper = input.parent(),
+        //         message = wrapper.find('.form__error');
+        //         wrapper.removeClass('is-error');
+        //         message.fadeOut(300);
+        // };
 
     }) ();
 

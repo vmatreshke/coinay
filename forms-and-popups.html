@@ -65,7 +65,7 @@
                     <i class="icon icon-code"></i>
                   </div>
                   <div class="form__field">
-                    <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
+                    <input type="text" class="input" placeholder="Bitcoin wallet address">
                     <i class="icon icon-wallet"></i>
                   </div>
                   <div class="form__field">
@@ -131,7 +131,7 @@
           <i class="icon icon-code"></i>
         </div>
         <div class="form__field">
-          <input type="text" class="input input_bitcoin js-wallet" placeholder="Bitcoin wallet address" value="588DFE8841EFVV848VVDW">
+          <input type="text" class="input js-wallet" placeholder="Bitcoin wallet address" value="588DFE8841EFVV848VVDW">
           <i class="icon icon-wallet"></i>
         </div>
         <div class="form__field">
@@ -330,7 +330,18 @@
             </div>
           </div>
           <div class="form__field">
-            <input type="text" placeholder="Subject" class="input">
+            <div class="select">
+              <input type="text" placeholder="Subject" class="input" readonly="readonly">
+              <select class="js-select" name="" id="">
+                <option value="">option 1</option>
+                <option value="">option 2</option>
+                <option value="">option 3</option>
+                <option value="">option 4</option>
+                <option value="">option 5</option>
+                <option value="">option 6</option>
+                <option value="">option 7</option>
+              </select>
+            </div>
             <i class="icon icon-subject"></i>
           </div>
           <div class="form__field">
