@@ -72,6 +72,15 @@ head.ready(function() {
     //     console.log(newstr);
     // });
 
+    $('.js-wallet').on('blur', function() {
+        var wallet = $(this).val();
+        console.log(wallet);
+        $.get('http://blockexplorer.com/q/checkaddress/' + wallet, function(data) {
+            alert('xxx == ' + data);
+            console.log(data);
+        });
+    });
+
     var toggleMenu = function() {
         menuBtn.toggleClass('is-active');
         menu.toggleClass('is-visible');
@@ -183,8 +192,5 @@ head.ready(function() {
         });
 
     }) ();
-
-
-
 
 });
