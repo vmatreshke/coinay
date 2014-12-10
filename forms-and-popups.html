@@ -8,70 +8,7 @@
   <link rel="stylesheet" media="all" href="css/screen.css" >
   <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-  <script>
-
-    var map;
-    function initialize() {
-
-      var mapOptions = {
-        zoom: 17,
-        disableDefaultUI: true,
-        scrollwheel: false,
-        center: new google.maps.LatLng(40.4149025,-3.7037002)
-      };
-      map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-      var image = 'img/marker.png';
-
-      var points = [
-        ['First point',  40.4153871, -3.7081734, 1],
-        ['Second point', 40.4150604, -3.7062288, 2],
-        ['Third point',  40.4153886, -3.7033086, 3],
-      ];
-
-      function setMarkers(map, locations) {
-        for (var i = 0; i <= locations.length; i++) {
-          var point = locations[i];
-          var myLatlng = new google.maps.LatLng(point[1], point[2]);
-          var marker = new google.maps.Marker({
-            position : myLatlng,
-            map: map,
-            icon: image,
-            title: point[0],
-            zIndex: point[3]
-          });
-        }
-      }
-
-      // google.maps.event.addListener(map, 'mouseover', function(event) {
-      //   if (window.innerWidth > 800) {
-      //     window.setTimeout(function() {
-      //       map.setOptions({
-      //         disableDefaultUI: false,
-      //         scrollwheel: true
-      //       });
-      //     }, 1000);
-      //   }
-      // });
-
-      // google.maps.event.addListener(map, 'mouseout', function(event) {
-      //   if (window.innerWidth > 800) {
-      //     window.setTimeout(function() {
-      //       map.setOptions({
-      //         disableDefaultUI: true,
-      //         scrollwheel: false
-      //       });
-      //     }, 1000);
-      //   }
-      // });
-
-      setMarkers(map, points);
-
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-  </script>
+  <script src="js/map.js"></script>
 </head>
 <body>
 
@@ -121,22 +58,11 @@
               </div>
               <div class="toparea__main-right hide-on-mobile">
                 <!-- BEGIN form -->
-                <form class="form form_transparent">
-                  <strong class="form__title">Coinay voucher code</strong>
-                  <div class="form__field form__field_code">
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                    </div>
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                    </div>
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                    </div>
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                      <i class="icon icon-code"></i>
-                    </div>
+                <form class="form form_transparent js-form">
+                  <strong class="form__title">Your coinay voucher code</strong>
+                  <div class="form__field">
+                    <input type="text" class="input js-code" placeholder="Coinay voucher field">
+                    <i class="icon icon-code"></i>
                   </div>
                   <div class="form__field">
                     <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
@@ -147,7 +73,7 @@
                     <i class="icon icon-user"></i>
                   </div>
                   <div class="form__field">
-                    <input type="email" class="input" placeholder="Email address">
+                    <input type="email" class="input" placeholder="Your email address">
                     <i class="icon icon-mail"></i>
                   </div>
                   <div class="form__footer">
@@ -198,25 +124,14 @@
     <div class="l">
       <h2 name="redeem" class="title title_margin">Redeem <br> coinay voucher</h2>
       <!-- BEGIN form -->
-      <form class="form">
-        <strong class="form__title">Coinay voucher code</strong>
-        <div class="form__field form__field_code">
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-          </div>
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-          </div>
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-          </div>
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-            <i class="icon icon-code"></i>
-          </div>
+      <form class="form js-form">
+        <strong class="form__title">Your coinay voucher code</strong>
+        <div class="form__field">
+          <input type="text" class="input js-code" placeholder="Coinay voucher field">
+          <i class="icon icon-code"></i>
         </div>
         <div class="form__field">
-          <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
+          <input type="text" class="input input_bitcoin js-wallet" placeholder="Bitcoin wallet address" value="588DFE8841EFVV848VVDW">
           <i class="icon icon-wallet"></i>
         </div>
         <div class="form__field">
@@ -224,7 +139,7 @@
           <i class="icon icon-user"></i>
         </div>
         <div class="form__field">
-          <input type="email" class="input" placeholder="Email address">
+          <input type="email" class="input" placeholder="Your email address">
           <i class="icon icon-mail"></i>
         </div>
         <div class="form__footer">
@@ -240,35 +155,27 @@
       <div style="padding: 10px"></div>
 
       <!-- BEGIN form -->
-      <form class="form">
+      <form class="form js-form">
         <strong class="form__title">Coinay voucher code</strong>
-        <div class="form__field form__field_code">
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code" value="1234">
-          </div>
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code" value="1234">
-          </div>
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-          </div>
-          <div class="form__field-cell">
-            <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-            <i class="icon icon-code"></i>
-          </div>
+        <div class="form__field is-error">
+          <input type="text" class="input js-code" placeholder="Coinay voucher field">
+          <i class="icon icon-code"></i>
+          <span class="form__error">Please enter the voucher code from your coinay card or pin.</span>
         </div>
         <div class="form__field is-error">
-          <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address" value="588DFE8841EFVV848VVDW">
+          <input type="text" class="input input_bitcoin js-wallet" placeholder="Bitcoin wallet address" value="588DFE8841EFVV848VVDW">
           <i class="icon icon-wallet"></i>
-          <span class="form__error">Wrong bitcoin wallet address</span>
+          <span class="form__error">Please enter and double check your bitcoin wallet address. It should have ~33 characters and look like "1sUdNf3Dsf35d..."</span>
         </div>
-        <div class="form__field">
+        <div class="form__field is-error">
           <input type="text" class="input" placeholder="Your name">
           <i class="icon icon-user"></i>
+          <span class="form__error">Please enter your name</span>
         </div>
-        <div class="form__field">
+        <div class="form__field is-error">
           <input type="email" class="input" placeholder="Email address">
           <i class="icon icon-mail"></i>
+          <span class="form__error">Please check your email address format</span>
         </div>
         <div class="form__footer">
           <div class="form__footer-left">
@@ -284,7 +191,7 @@
       <div style="padding: 10px"></div>
 
       <!-- BEGIN form -->
-      <form class="form">
+      <div class="form">
         <strong class="form__title form__title_big">Confirmation</strong>
         <div class="confirm">
           <dl class="confirm__row">
@@ -326,7 +233,7 @@
             <div class="form__link"><a href="#">Change data?</a></div>
           </div>
         </div>
-      </form>
+      </div>
       <!-- END form -->
 
       <div style="padding: 10px"></div>
@@ -411,7 +318,7 @@
       <div class="l">
         <h2 class="title">Contact us with questions <br> and feedback</h2>
         <!-- BEGIN form -->
-        <form class="form form_contact">
+        <form class="form form_contact js-form">
           <div class="form__field form__field_two">
             <div class="form__field-cell">
               <input type="text" placeholder="Your Name" class="input">

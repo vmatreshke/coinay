@@ -148,15 +148,21 @@ textarea.input
   font-size: 15px
   color: #FFF
   +t(all)
-  &:hover
+  &:hover, &:focus
     +background-image(linear-gradient(to top, #FF9C00 0%, #FFC000 100%))
   // &:active
   //   +background-image(linear-gradient(to top, #78A656 0%, #78A656 100%))
-
+  &[disabled="disabled"]
+    opacity: 0.8
+    cursor: default
+    +background-image(linear-gradient(to top, #FF8400 0%, #FFA200 100%))
   &.btn_blue
     +background-image(linear-gradient(to top, #00599E 0%, #006BBE 100%))
-    &:hover
+    &:hover, &:focus
       +background-image(linear-gradient(to top, #016FC5 0%, #0089F4 100%))
+    &[disabled="disabled"]
+      opacity: 0.5
+      +background-image(linear-gradient(to top, #00599E 0%, #006BBE 100%))
 
 .menu-btn
   display: none

@@ -8,47 +8,7 @@
   <link rel="stylesheet" media="all" href="css/screen.css" >
   <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-  <script>
-
-    var map;
-    function initialize() {
-
-      var mapOptions = {
-        zoom: 17,
-        disableDefaultUI: true,
-        scrollwheel: false,
-        center: new google.maps.LatLng(40.4149025,-3.7037002)
-      };
-      map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-
-      var image = 'img/marker.png';
-      var points = [
-        ['First point',40.4153871,-3.7081734, 1],
-        ['Second point',40.4150604,-3.7062288, 2],
-        ['Third point',40.4153886,-3.7033086, 3],
-      ];
-
-      function setMarkers(map, locations) {
-        for (var i = 0; i <= locations.length; i++) {
-          var point = locations[i];
-          var myLatlng = new google.maps.LatLng(point[1], point[2]);
-          var marker = new google.maps.Marker({
-            position : myLatlng,
-            map: map,
-            icon: image,
-            title: point[0],
-            zIndex: point[3]
-          });
-        }
-      }
-
-      setMarkers(map, points);
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-  </script>
+  <script src="js/map.js"></script>
 </head>
 <body>
 
@@ -69,7 +29,7 @@
                     <li><a href="#redeem">Redeem</a></li>
                     <li><a href="#how-it-works">How it works</a></li>
                     <li><a href="#where-to-buy">Where to buy</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact us</a></li>
                   </ul>
                 </nav>
                 <div class="lang">
@@ -98,22 +58,11 @@
               </div>
               <div class="toparea__main-right hide-on-mobile">
                 <!-- BEGIN form -->
-                <form class="form form_transparent">
-                  <strong class="form__title">Coinay voucher code</strong>
-                  <div class="form__field form__field_code">
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                    </div>
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                    </div>
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                    </div>
-                    <div class="form__field-cell">
-                      <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-                      <i class="icon icon-code"></i>
-                    </div>
+                <form class="form form_transparent js-form">
+                  <strong class="form__title">Your coinay voucher code</strong>
+                  <div class="form__field">
+                    <input type="text" class="input js-code" placeholder="Coinay voucher field">
+                    <i class="icon icon-code"></i>
                   </div>
                   <div class="form__field">
                     <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
@@ -124,7 +73,7 @@
                     <i class="icon icon-user"></i>
                   </div>
                   <div class="form__field">
-                    <input type="email" class="input" placeholder="Email address">
+                    <input type="email" class="input" placeholder="Your email address">
                     <i class="icon icon-mail"></i>
                   </div>
                   <div class="form__footer">
@@ -177,22 +126,11 @@
       <div class="l">
         <h2 class="title title_margin">Redeem <br> coinay voucher</h2>
         <!-- BEGIN form -->
-        <form class="form">
-          <strong class="form__title">Coinay voucher code</strong>
-          <div class="form__field form__field_code">
-            <div class="form__field-cell">
-              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-            </div>
-            <div class="form__field-cell">
-              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-            </div>
-            <div class="form__field-cell">
-              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-            </div>
-            <div class="form__field-cell">
-              <input type="text" pattern="[0-9]*" maxlength="4" class="input input_code">
-              <i class="icon icon-code"></i>
-            </div>
+        <form class="form js-form">
+          <strong class="form__title">Your coinay voucher code</strong>
+          <div class="form__field">
+            <input type="text" class="input js-code" placeholder="Coinay voucher field">
+            <i class="icon icon-code"></i>
           </div>
           <div class="form__field">
             <input type="text" class="input input_bitcoin" placeholder="Bitcoin wallet address">
@@ -203,7 +141,7 @@
             <i class="icon icon-user"></i>
           </div>
           <div class="form__field">
-            <input type="email" class="input" placeholder="Email address">
+            <input type="email" class="input" placeholder="Your email address">
             <i class="icon icon-mail"></i>
           </div>
           <div class="form__footer">
@@ -269,7 +207,7 @@
       <div class="l">
         <h2 class="title">Contact us with questions <br> and feedback</h2>
         <!-- BEGIN form -->
-        <form class="form form_contact">
+        <form class="form form_contact js-form">
           <div class="form__field form__field_two">
             <div class="form__field-cell">
               <input type="text" placeholder="Your Name" class="input">
@@ -293,8 +231,10 @@
         <!-- END form -->
         <!-- BEGIN privacy -->
         <div class="privacy">
-          <p>With your redemption, you agree to confirm with our</p>
-          <p><a href="#">Privacy policy</a><span class="privacy__divider">•</span><a href="#">Terms & conditions</a></p>
+          <p>
+            With your redemption, you agree to confirm with our <br>
+            <a href="#">Privacy policy</a><span class="privacy__divider">•</span><a href="#">Terms & conditions</a>
+          </p>
           <p>Contact us with any questions!</p>
         </div>
         <!-- END privacy -->

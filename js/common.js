@@ -53,6 +53,25 @@ head.ready(function() {
         hidePopup(targetPopup);
     });
 
+    //mask for input bitcoin code
+    $('.js-code').mask('0000-0000-0000-0000', {'translation': {0: {pattern: /[A-Za-z0-9]/}}});
+
+    // $('.js-code').on('focusout', function() {
+    //     var str = $(this).val();
+    //     console.log(str);
+    //     function newString(string) {
+    //         var newstring = '';
+    //         for (var i = 0; i <= string.length-1; i++) {
+    //             if (str[i] !== '-') {
+    //                 newstring += str[i];
+    //             }
+    //         }
+    //         return newstring;
+    //     }
+    //     var newstr = newString(str);
+    //     console.log(newstr);
+    // });
+
     var toggleMenu = function() {
         menuBtn.toggleClass('is-active');
         menu.toggleClass('is-visible');
@@ -109,5 +128,63 @@ head.ready(function() {
             }
         });
     }) ();
+
+    //active or inactive submit button in forms
+    (function() {
+
+        $('.js-form').each(function() {
+            var form   = $(this),
+                btn    = form.find('button[type="submit"]'),
+                input  = form.find('input:not([type="checkbox"], [type="radio"]), textarea'),
+                inputs = [],
+                status = []; // [false, false, false, true, ...]
+
+            // check if input has value
+            var checkStatus = function(input) {
+                if (input.val()) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+
+            // toggle button
+            var toggleSubmitBtn = function() {
+                if (status.indexOf(false) !== -1 ) {
+                    if ( !btn.is(':disabled') ) {
+                        btn.attr('disabled', 'disabled');
+                    }
+                } else {
+                    if ( btn.is(':disabled') ) {
+                        btn.removeAttr('disabled');
+                    }
+                }
+            };
+
+            // add each input to array and create status array
+            input.each(function() {
+                inputs.push($(this));
+                status.push(checkStatus($(this)));
+            });
+
+            toggleSubmitBtn();
+
+
+            // check if
+            $(inputs).each(function() {
+                var currentElement = this;
+                $(currentElement).on('input', function() {
+                    var check = checkStatus($(currentElement));
+                    var index = inputs.indexOf(currentElement);
+                    status[index] = check;
+                    toggleSubmitBtn();
+                });
+            });
+        });
+
+    }) ();
+
+
+
 
 });
