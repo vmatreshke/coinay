@@ -79,6 +79,9 @@ textarea.input { height: 140px; resize: none; }
 .select { position: relative; }
 .select select { position: absolute; top: 0; left: 0; width: 100%; height: 100%; -webkit-appearance: none; opacity: 0; }
 
+.blue-link { color: #0B5B9C; text-decoration: none; -moz-transition: all 0.15s linear; -o-transition: all 0.15s linear; -webkit-transition: all 0.15s linear; transition: all 0.15s linear; }
+.blue-link:hover { color: #FF9800; }
+
 @font-face { font-family: "iconfont"; src: url("../fonts/iconfont.eot?add2dx"); src: url("../fonts/iconfont.eot?#iefixadd2dx") format("embedded-opentype"), url("../fonts/iconfont.woff?add2dx") format("woff"), url("../fonts/iconfont.ttf?add2dx") format("truetype"), url("../fonts/iconfont.svg?add2dx#iconfont") format("svg"); font-weight: normal; font-style: normal; }
 .icon { font-family: "iconfont"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; background: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -389,6 +392,13 @@ textarea.input { height: 140px; resize: none; }
 .popup__close:hover { color: #000; }
 
 .popup__text { margin-top: 14px; }
+.popup__text p + p { margin-top: 10px; }
+.popup__text strong { font-family: "OpenSans-Semibold", Arial, sans-serif; font-weight: normal; }
+
+.popup__title { display: block; font-family: "OpenSans-Light", Arial, sans-serif; font-weight: normal; font-size: 20px; margin-bottom: 14px; }
+.icon + .popup__title { margin-top: 14px; }
+
+.popup__small { font-size: 12px; line-height: 1.2; color: #A3A3A3; }
 
 .popup_error .popup__inner { max-width: 400px; background: #FEE9E9; }
 .popup_error .popup__text { color: #730606; }

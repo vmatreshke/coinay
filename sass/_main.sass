@@ -876,6 +876,23 @@
 
 .popup__text
   margin-top: 14px
+  p + p
+    margin-top: 10px
+  strong
+    +semibold
+
+.popup__title
+  display: block
+  +light
+  font-size: 20px
+  margin-bottom: 14px
+  .icon + &
+    margin-top: 14px
+
+.popup__small
+  font-size: 12px
+  line-height: 1.2
+  color: $gray-text
 
 .popup_error
   .popup__inner

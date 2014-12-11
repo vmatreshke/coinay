@@ -81,7 +81,7 @@
                       <button type="submit" class="btn">Redeem</button>
                     </div>
                     <div class="form__footer-right">
-                      <div class="form__link"><a href="#">No bitcoin wallet address?</a></div>
+                      <div class="form__link "><a href="#" class="js-show-popup" data-popup="no-address">No bitcoin wallet address?</a></div>
                     </div>
                   </div>
                 </form>
@@ -269,6 +269,18 @@
   <!-- END out-->
 
   <div class="overlay"></div>
+
+  <div id="no-address" class="popup">
+    <div class="popup__inner">
+      <button class="popup__close icon icon-close"></button>
+      <!-- <i class="icon icon-alert"></i> -->
+      <strong class="popup__title">Get your bitcoin wallet</strong>
+      <div class="popup__text">
+        <p>Please head to <a class="blue-link" href="#">link to provider</a> to open a bitcoin wallet</p>
+        <small class="popup__small">There is no affiliation between coinay and wallet providers. Please use any wallet at your own risk, and consult with the wallet provider for terms and conditions.</small>
+      </div>
+    </div>
+  </div>
 
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>

@@ -81,7 +81,7 @@
                       <button type="submit" class="btn">Redeem</button>
                     </div>
                     <div class="form__footer-right">
-                      <div class="form__link"><a href="#">No bitcoin wallet address?</a></div>
+                      <div class="form__link"><a href="#" class="js-show-popup" data-popup="no-address">No bitcoin wallet address?</a></div>
                     </div>
                   </div>
                 </form>
@@ -182,7 +182,7 @@
             <button type="submit" class="btn">Redeem</button>
           </div>
           <div class="form__footer-right">
-            <div class="form__link"><a href="#">No bitcoin wallet address?</a></div>
+            <div class="form__link"><a href="#" class="js-show-popup" data-popup="no-address">No bitcoin wallet address?</a></div>
           </div>
         </div>
       </form>
@@ -362,9 +362,14 @@
     </div>
     <!-- END contact -->
 
-    <div class="l" style="margin-bottom:50px;text-align:center">
+    <div class="l" style="margin-bottom:20px;text-align:center">
+      <div class="title">Popups</div>
       <button class="btn js-show-popup" data-popup="message1">Show message 1</button>
       <button class="btn btn_blue js-show-popup" data-popup="message2">Show message 2</button>
+    </div>
+    <div class="l" style="margin-bottom:50px;text-align:center">
+      <button class="btn js-show-popup" data-popup="no-address">No address</button>
+      <button class="btn btn_blue js-show-popup" data-popup="success">Success</button>
     </div>
 
     <!-- BEGIN footer -->
@@ -398,6 +403,34 @@
       <button class="popup__close icon icon-close"></button>
       <i class="icon icon-checkmark-round"></i>
       <p class="popup__text">Thank you, your email has been sent!</p>
+    </div>
+  </div>
+  <!-- END popup -->
+
+  <!-- BEGIN popup -->
+  <div id="no-address" class="popup">
+    <div class="popup__inner">
+      <button class="popup__close icon icon-close"></button>
+      <!-- <i class="icon icon-alert"></i> -->
+      <strong class="popup__title">Get your bitcoin wallet</strong>
+      <div class="popup__text">
+        <p>Please head to <a class="blue-link" href="#">link to provider</a> to open a bitcoin wallet</p>
+        <small class="popup__small">There is no affiliation between coinay and wallet providers. Please use any wallet at your own risk, and consult with the wallet provider for terms and conditions.</small>
+      </div>
+    </div>
+  </div>
+  <!-- END popup -->
+
+  <!-- BEGIN popup -->
+  <div id="success" class="popup">
+    <div class="popup__inner">
+      <button class="popup__close icon icon-close"></button>
+      <i class="icon icon-checkmark-round"></i>
+      <strong class="popup__title">Dear @name</strong>
+      <div class="popup__text">
+        <p>Thank you very much for redeeming your coinay voucher!</p>
+        <p>Your bitcoin amount of <strong> %{bitcoin_amount} </strong> will be transferred to your bitcoin wallet <strong> %{redemption_wallet} </strong> within %{transfer_time} (during normal business hours). You will receive a separate email as soon as the transfer has been completed.</p>
+      </div>
     </div>
   </div>
   <!-- END popup -->
