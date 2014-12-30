@@ -28,7 +28,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .show-on-mobile { display: none; }
 @media only screen and (max-width: 700px) { .show-on-mobile { display: block; } }
 
-body { min-width: 320px; font-family: "OpenSans-Regular", Arial, sans-serif; font-weight: normal; font-size: 15px; line-height: 1.5; }
+body { width: 100%; min-width: 320px; font-family: "OpenSans-Regular", Arial, sans-serif; font-weight: normal; font-size: 15px; line-height: 1.5; }
 
 .overlay { display: none; position: fixed; z-index: 9; top: 0; left: 0; right: 0; bottom: 0; background: rgba(3, 27, 44, 0.8); }
 
@@ -128,6 +128,11 @@ textarea.input { height: 140px; resize: none; }
 .toparea { display: table; width: 100%; height: 100vh; table-layout: fixed; color: #FFF; background-position: 20% 40%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; background-color: #0B3250; background-image: url("../img/toparea-bg.jpg"); }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .toparea { background-image: url("../img/toparea-bg2x.jpg"); } }
 @media only screen and (max-width: 700px) { .toparea { height: auto; } }
+.toparea.toparea_narrow { display: block; height: auto; }
+.toparea.toparea_narrow .toparea__inner { display: block; padding: 0; }
+.toparea.toparea_narrow .header { position: static; padding: 40px 0; }
+@media only screen and (max-width: 700px) { .toparea.toparea_narrow .header { padding: 15px 0 15px; } }
+.toparea.toparea_narrow .toparea__main, .toparea.toparea_narrow .line { display: none; }
 
 .toparea__inner { display: table-cell; position: relative; vertical-align: middle; padding: 125px 0; background: rgba(11, 50, 80, 0.7); }
 @media only screen and (max-width: 700px) { .toparea__inner { padding: 0; } }

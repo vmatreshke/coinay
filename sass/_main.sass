@@ -15,6 +15,19 @@
     background-image: url('../img/toparea-bg2x.jpg')
   +mob
     height: auto
+  &.toparea_narrow
+    display: block
+    height: auto
+    .toparea__inner
+      display: block
+      padding: 0
+    .header
+      position: static
+      padding: 40px 0
+      +mob
+        padding: 15px 0 15px
+    .toparea__main, .line
+      display: none
 
 .toparea__inner
   display: table-cell
